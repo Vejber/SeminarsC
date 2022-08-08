@@ -16,17 +16,19 @@ if (a == b && b == c)
 {
   System.Console.WriteLine("There is no min or max");
 }
+else if(a == b || a == c || b == c)
+{
 if (a == b)
 {
   if(a>c)
   {
     max = a;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
   else if(c>a)
   {
     max = c;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
 }
 else if(b == c)
@@ -34,12 +36,12 @@ else if(b == c)
   if(b>a)
   {
     max = b;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
   if(a>b)
   {
    max = a;
-  System.Console.WriteLine($"max = {max}");
+  //System.Console.WriteLine($"max = {max}");
    }
 }
 else if(a == c)
@@ -47,29 +49,32 @@ else if(a == c)
   if(a>b)
   {
     max = a;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
   if(b>a)
   {
     max = b;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
 }
-else if (a>max)
+else if (max<a)
 {
   max = a;
-  System.Console.WriteLine($"max = {max}");
+  //System.Console.WriteLine($"max = {max}");
+ }
 }
-else if(b>max)
+else if(max<b)
 {
-  if(b>c)
+  if(c<b)
   {
     max = b;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
-  else if(c>b)
+  else if(b<c)
   {
     max = c;
-    System.Console.WriteLine($"max = {max}");
+    //System.Console.WriteLine($"max = {max}");
   }
+  System.Console.WriteLine($"max = {max}");
 }
+System.Console.WriteLine($"max = {max}");
