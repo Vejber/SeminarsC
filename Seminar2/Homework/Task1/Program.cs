@@ -6,15 +6,18 @@ int Prompt(string message)
   int result = int.Parse(readValue); // Преобрадует строку в целое число
   return result; // Возвращает результат
 }
-
-int Number = Prompt("enter a three-digit number > ");
-if(Number >= 100 && Number < 1000) //валидация
+void MiddleDigit(int Number)
 {
-  int Last = Number%100;
-  int Middle = Last/10;
-  Console.WriteLine($"{Middle}");
+  if(Number >= 100 && Number < 1000) //валидация
+  {
+    int Last = Number%100;
+    int Middle = Last/10;
+    Console.WriteLine($"{Middle}");
+  }
+  else
+  {
+    Console.WriteLine("Incorrect number");
+  }
 }
-else
-{
-  Console.WriteLine("Incorrect number");
-}
+int num = Prompt("enter a three-digit number > ");
+MiddleDigit(num);
