@@ -9,16 +9,21 @@ int Prompt(string message)
   return result; // Возвращает результат
 }
 
-int Number = Prompt("enter a number from 1 to 7 > ");
-if(Number < 1 || Number > 7)
+void DayOff(int Number)
 {
-  Console.WriteLine("Incorrect number, try again");
+  if(Number < 1 || Number > 7)
+  {
+    Console.WriteLine("Incorrect number, try again");
+  }
+  else if (Number >=1 && Number <= 5)
+  {
+    Console.WriteLine("A weekday");
+  }
+  else if (Number > 5 && Number < 8)
+  {
+    Console.WriteLine("A weekend day");
+  }
+
 }
-else if (Number >=1 && Number <= 5)
-{
-  Console.WriteLine("A weekday");
-}
-else if (Number > 5 && Number < 8)
-{
-  Console.WriteLine("A weekend day");
-}
+int value = Prompt("enter a number from 1 to 7 > ");
+DayOff(value);
