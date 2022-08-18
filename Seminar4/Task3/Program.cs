@@ -22,10 +22,7 @@ int multi(int arg)// 4
   }
   else if (arg <= 0)
   {
-    for(int i=1; i>=arg; i--)
-    {
-      product = product*i;
-    }
+      product = 0;    
   }
   return product;
 }
