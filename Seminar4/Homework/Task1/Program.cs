@@ -12,7 +12,7 @@ int Prompt(string message)
   return result; // Возвращает результат
 }
 
-int GoExponent(int baza, int exponent) 
+int GoExponent(int baza, int exponent)
 {
   int result = 1;
   for (int i = 0; i< exponent; i++)
@@ -24,7 +24,7 @@ int GoExponent(int baza, int exponent)
 
 int Number1 = Prompt("Enter the base > "); //число
 int Number2 = Prompt("Enter a positive exponent > "); //степень
-if (Number2 > 0)
+if (Number2 > 0) //проверка степени на натуральность
 {
   int product = GoExponent(Number1, Number2);
   Console.WriteLine($"{Number1} raised to the power of {Number2} = {product}");
