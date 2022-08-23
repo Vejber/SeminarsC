@@ -10,7 +10,7 @@ void FillArray(int[] collection)
   int index = 0;
   while(index<length)
   {
-    collection[index] = new Random().Next(-100,101);
+    collection[index] = new Random().Next(1,10);
     index++;
   }
 }
@@ -39,7 +39,7 @@ int Sum (int[] a)
   int count = 0;
   for(index = 0; index < length; index++)
   {
-    if(a[index] % 2 != 0)
+    if(index % 2 != 0)
     {
       count = count + a[index];
     }
@@ -51,4 +51,4 @@ int[]array = new int[10];
 FillArray(array);
 PrintArray(array);
 int Count = Sum(array);
-Console.WriteLine($" The total of odd elements in the array is {Count}");
+Console.WriteLine($" -> {Count}");
