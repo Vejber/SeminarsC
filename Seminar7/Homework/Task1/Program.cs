@@ -26,7 +26,7 @@ void FillArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(-10,10), 1); // добавляем числа с остатком, указываем сколько цифр после запятой должно быть
+            matr[i, j] = Math.Round(new Random().NextDouble() * new Random().Next(-10, 10), 1); // добавляем числа с остатком, указываем сколько цифр после запятой должно быть
         }
     }
 }
@@ -43,6 +43,13 @@ int Prompt(string message)
 
 int m = Prompt("Enter the number of rows in a table > ");
 int n = Prompt("Enter the number of columns in a table > ");
-double[,] matrix = new double[m, n];
-FillArray(matrix);
-PrintArray(matrix);
+if (m > 0 && n > 0)
+{
+    double[,] matrix = new double[m, n];
+    FillArray(matrix);
+    PrintArray(matrix);
+}
+else
+{
+    Console.WriteLine("The number of rows and columns must be above zero");
+}
