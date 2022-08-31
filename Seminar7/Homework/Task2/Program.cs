@@ -55,16 +55,16 @@ void FindPosition(int[,] array)
         }
         else
         {
-            for (i = 0; i < array.GetLength(0); i++)
-            {
-                for (j = 0; j < array.GetLength(1); j++)
-                {
-                    if (array[m, n] == array[i, j])
-                    {
+            //for (i = 0; i < array.GetLength(0); i++) //такие циклы утяжеляют выполнение алгоритма, и в данном случае работает и без них
+            //{
+              //  for (j = 0; j < array.GetLength(1); j++)
+                //{
+                  //  if (array[m, n] == array[i, j])
+                    //{
                         Console.WriteLine($"{array[i, j]}");
-                    }
-                }
-            }
+                    //}
+                //}
+           // }
         }
 
     }
